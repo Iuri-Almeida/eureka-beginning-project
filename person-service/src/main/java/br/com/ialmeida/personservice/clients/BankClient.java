@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface BankClient {
 
     @GetMapping(value = "/{code}")
-    Bank getBankByCode(@PathVariable String code);
+    Bank getBankByCode(@PathVariable Long code);
 
 }

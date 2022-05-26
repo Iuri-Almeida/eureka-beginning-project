@@ -18,7 +18,7 @@ public class BankController {
     }
 
     @GetMapping(value = "/{code}")
-    public Bank getAddressByCode(@PathVariable String code) {
+    public Bank getAddressByCode(@PathVariable Long code) {
         return bankClient.getAddressByCode(code);
     }
 }
