@@ -5,10 +5,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(url = "http://localhost:8081/address", name = "address")
+@FeignClient(name = "address")
 public interface AddressClient {
 
-    @GetMapping(value = "/{cep}")
+    @GetMapping(value = "/address/{cep}")
     Address getAddressByCEP(@PathVariable String cep);
 
 }
